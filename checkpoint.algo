@@ -1,0 +1,23 @@
+ALGORITHM sent_length
+VAR
+    num_letters: INTEGER := 0;
+    num_words: INTEGER := 0;
+    num_vowels: INTEGER :=0;
+    sent = STRING[];
+    i: INTEGER := 0;
+BEGIN
+    write("type your sentence:")
+    read(sent)
+    WHILE (sent[i] <> '.') DO
+        IF (sent[i] >= 'a' AND sent[i] <= 'z' OR sent[i] >= 'A' AND sent[i] <= 'Z') THEN
+            num_letters = num_letters + 1;
+            IF (sent[i] in ['a','e','u','i','o','A','E','U','I','O']) THEN
+                num_vowels = num_vowels + 1
+            END_IF
+        ELSE_IF (sent[i] = ' ') THEN
+            num_words = num_words + 1
+        END_IF
+        i = i + 1;
+    END_WHILE
+END
+

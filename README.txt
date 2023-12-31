@@ -1,0 +1,2 @@
+This algorithm take a sentence as an input from the user which ends with  point.
+It then iterates through each character of the sentence counting the number of letters, vowels, and word in the sentence
